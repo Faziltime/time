@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const yearSelect = document.getElementById('year');
     const monthSelect = document.getElementById('month');
     const goButton = document.getElementById('goButton');
-    const resultDiv = document.getElementById('result');
     const eventText = document.getElementById('eventText');
     const eventImage = document.getElementById('eventImage');
 
@@ -40,6 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedYear = yearSelect.value;
         const selectedMonth = monthSelect.value;
         const key = `${selectedYear}-${selectedMonth}`;
+
+        console.log(`Selected Year-Month Key: ${key}`); // Debugging line
 
         const event = amazingEvents[key];
         if (event) {
