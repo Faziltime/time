@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const amazingEvents = {
         '2019-07': {
             text: 'England won the Cricket World Cup in July 2019!',
-            image: 'england.jpg' // Local image
+            image: 'england.webp' // Local image
         },
         '2023-01': {
             text: 'Amazing Event in January 2023',
