@@ -18,19 +18,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const amazingEvents = {
         '2019-07': {
             text: 'England won the Cricket World Cup in July 2019!',
-            image: 'https://example.com/images/england_wc_2019.jpg' // Replace with actual image URL
+            image: 'england.jpg' // Local image
         },
         '2023-01': {
             text: 'Amazing Event in January 2023',
-            image: 'https://example.com/images/event_jan_2023.jpg' // Replace with actual image URL
+            image: 'event_jan_2023.jpg' // Placeholder for another local image
         },
         '2022-02': {
             text: 'Spectacular Event in February 2022',
-            image: 'https://example.com/images/event_feb_2022.jpg' // Replace with actual image URL
+            image: 'event_feb_2022.jpg' // Placeholder for another local image
         },
         '2021-03': {
             text: 'Incredible Event in March 2021',
-            image: 'https://example.com/images/event_mar_2021.jpg' // Replace with actual image URL
+            image: 'event_mar_2021.jpg' // Placeholder for another local image
         },
         // Add more events as needed
     };
