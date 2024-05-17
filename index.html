@@ -3,42 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Background Image with Icons and Picker</title>
+    <title>Year/Month Picker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="background-container">
-        <img src="assets/bg.jpg" alt="Background" class="background-image">
-        <div class="icons">
-            <img src="assets/ic.jpg" alt="Icon 1" class="icon">
-            <img src="assets/icc.jpg" alt="Icon 2" class="icon">
-            <img src="assets/iccc.jpg" alt="Icon 3" class="icon">
+    <div class="container">
+        <div class="picker">
+            <select id="year">
+                <!-- Years will be populated by JavaScript -->
+            </select>
+            <select id="month">
+                <option value="01">January</option>
+                <option value="02">February</option>
+                <option value="03">March</option>
+                <option value="04">April</option>
+                <option value="05">May</option>
+                <option value="06">June</option>
+                <option value="07">July</option>
+                <option value="08">August</option>
+                <option value="09">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+            </select>
+            <button id="goButton">Go</button>
         </div>
-        <div class="picker-container">
-            <label for="year">Year: </label>
-            <select id="year" class="picker">
-                <option value="2020">2020</option>
-                <option value="2021">2021</option>
-                <option value="2022">2022</option>
-                <option value="2023">2023</option>
-            </select>
-            <label for="month">Month: </label>
-            <select id="month" class="picker">
-                <option value="January">January</option>
-                <option value="February">February</option>
-                <option value="March">March</option>
-                <option value="April">April</option>
-                <option value="May">May</option>
-                <option value="June">June</option>
-                <option value="July">July</option>
-                <option value="August">August</option>
-                <option value="September">September</option>
-                <option value="October">October</option>
-                <option value="November">November</option>
-                <option value="December">December</option>
-            </select>
+        <div id="result">
+            <!-- Amazing event will be displayed here -->
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
+``
 
