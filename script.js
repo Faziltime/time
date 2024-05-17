@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const monthSelect = document.getElementById('month');
     const goButton = document.getElementById('goButton');
     const resultDiv = document.getElementById('result');
+    const eventText = document.getElementById('eventText');
+    const eventImage = document.getElementById('eventImage');
 
     // Populate the year select with options
     const currentYear = new Date().getFullYear();
@@ -13,11 +15,24 @@ document.addEventListener('DOMContentLoaded', () => {
         yearSelect.appendChild(option);
     }
 
-    // Sample data for amazing events
+    // Sample data for amazing events with images
     const amazingEvents = {
-        '2023-01': 'Amazing Event in January 2023',
-        '2022-02': 'Spectacular Event in February 2022',
-        '2021-03': 'Incredible Event in March 2021',
+        '2019-07': {
+            text: 'England won the Cricket World Cup in July 2019!',
+            image: 'https://example.com/images/england_wc_2019.jpg' // Replace with actual image URL
+        },
+        '2023-01': {
+            text: 'Amazing Event in January 2023',
+            image: 'https://example.com/images/event_jan_2023.jpg' // Replace with actual image URL
+        },
+        '2022-02': {
+            text: 'Spectacular Event in February 2022',
+            image: 'https://example.com/images/event_feb_2022.jpg' // Replace with actual image URL
+        },
+        '2021-03': {
+            text: 'Incredible Event in March 2021',
+            image: 'https://example.com/images/event_mar_2021.jpg' // Replace with actual image URL
+        },
         // Add more events as needed
     };
 
@@ -26,8 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedMonth = monthSelect.value;
         const key = `${selectedYear}-${selectedMonth}`;
 
-        const eventMessage = amazingEvents[key] || 'No amazing event found for this date.';
-        resultDiv.textContent = eventMessage;
+        const event = amazingEvents[key];
+        if (event) {
+            eventText.textContent = event.text;
+            eventImage.src = event.image;
+            eventImage.style.display = 'block';
+        } else {
+            eventText.textContent = 'No amazing event found for this date.';
+            eventImage.style.display = 'none';
+        }
     });
 });
-
